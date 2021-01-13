@@ -32,7 +32,7 @@ cv2.destroyAllWindows ()
         In computer graphics and digital imaging, image scaling refers to the resizing of a digital image. ... When scaling a raster graphics image, a new image with a higher or lower number of pixels must be generated. In the case of decreasing the pixel number (scaling down) this usually results in a visible quality loss.
 ## b)Rotation 
       Image rotation is a common image processing routine with applications in matching, alignment, and other image-based algorithms. ... An image rotated by 45°. The output is the same size as the input, and the out of edge values are dropped.
-# code
+# code1
  import cv2 as c
 import numpy as np
 image = c.imread("image.jpg")
@@ -47,6 +47,20 @@ c.destroyAllWindows()
 
 #output:
 ![image](https://user-images.githubusercontent.com/77378707/104428156-20525500-55aa-11eb-907b-32511e3626c7.png)
+
+#code2
+import cv2 as c
+import numpy as np
+image = c.imread("image.jpg")
+gray = c.cvtColor(image,c.COLOR_BGR2RGB)
+h,w = image.shape[0:2]
+width = int(w * 2)
+hight = int(h *.5)
+res = c.resize(image,(width,hight))
+c.imshow("Fist Lab",res)
+c.waitKey(0)
+c.destroyAllWindows()
+#output:
 
 
         
