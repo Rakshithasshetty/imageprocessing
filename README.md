@@ -137,3 +137,25 @@ cv2.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/77378707/104431815-598cc400-55ae-11eb-8582-5170772f3d47.png)
 
+# 5. convet  a color image to different color space
+
+   Color space conversion is the translation of the representation of a color from one basis to another. This typically occurs in the context of converting an image that is represented in one color space to another color space, the goal being to make the translated image look as similar as possible to the original.
+# code
+import cv2
+image=cv2.imread('cat.jpg')
+cv2.imshow('pic',image)
+cv2.waitKey(0)
+image1 = cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)
+cv2.imshow('img1',image1)
+cv2.waitKey(0)
+image2 = cv2.cvtColor(image,cv2.COLOR_RGB2HSV)
+cv2.imshow('img2',image2)
+cv2.waitKey(0)
+image3 = cv2.cvtColor(image,cv2.COLOR_RGB2YUV)
+cv2.imshow('img2',image3)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+# output:
+
+   
