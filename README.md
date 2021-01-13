@@ -183,6 +183,7 @@ cv2.waitKey(0)
 
 ![image](https://user-images.githubusercontent.com/77378707/104434230-0405e680-55b1-11eb-9f17-b0ef297b175e.png)
 
+## 7. Find the neighbors matrix.
 # code
 import numpy as np
 from PIL import Image
@@ -193,3 +194,64 @@ img.show()
 
 # output:
 ![image](https://user-images.githubusercontent.com/77378707/104434947-da998a80-55b1-11eb-807b-ee98c94f7034.png)
+
+
+# code
+import numpy as np
+
+axis = 3
+x =np.empty((axis,axis))
+y = np.empty((axis+2,axis+2))
+s =np.empty((axis,axis))
+x = np.array([[1,4,3],[2,8,5],[3,4,6]])
+
+
+'''
+for i in range(0,axis):
+    for j in range(0,axis):
+        print(int(x[i][j]),end = '\t')
+    print('\n')'''
+
+print('Temp matrix\n')
+
+for i in range(0,axis+2):
+    for j in range(0,axis+2):
+        if i == 0 or i == axis+1 or j == 0 or j==axis+1:
+            y[i][j]=0
+        else:
+            #print("i = {}, J = {}".format(i,j))
+            y[i][j]=x[i-1][j-1]
+           
+
+for i in range(0,axis+2):
+    for j in range(0,axis+2):
+        print(int(y[i][j]),end = '\t')
+    print('\n')
+   
+   
+print('Output calculated Neigbhors of matrix\n')      
+for i in range(0,axis):
+    for j in range(0,axis):
+        s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2])/8)
+        print(s[i][j],end = '\t')
+    print('\n')
+# output:
+Temp matrix
+
+0	0	0	0	0	
+
+0	1	4	3	0	
+
+0	2	8	5	0	
+
+0	3	4	6	0	
+
+0	0	0	0	0	
+
+Output calculated Neigbhors of matrix
+
+1.75	2.375	2.125	
+
+2.5	3.5	3.125	
+
+1.75	3.0	2.125	
