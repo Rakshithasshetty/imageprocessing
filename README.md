@@ -109,8 +109,7 @@ cv2.waitKey(0)
 
 ## output:
 
-![image](https://user-images.githubusercontent.com/77378707/104430506-c3a46980-55ac-11eb-948b-e9025352fbae.png)
-![image](https://user-images.githubusercontent.com/77378707/104430607-e9317300-55ac-11eb-836c-8e9e49ef876c.png)
+![image](https://user-images.githubusercontent.com/77378707/104430506-c3a46980-55ac-11eb-948b-e9025352fbae.png)  ![image](https://user-images.githubusercontent.com/77378707/104430607-e9317300-55ac-11eb-836c-8e9e49ef876c.png)
 
 # 4. Convert color image gray scale to binary image
 Thresholding is the simplest method of image segmentation and the most common way to convert a grayscale image to a binary image. ... Here g(x, y) represents threshold image pixel at (x, y) and f(x, y) represents greyscale image pixel at (x, y).
