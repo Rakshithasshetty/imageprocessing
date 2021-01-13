@@ -26,7 +26,7 @@ cv2.destroyAllWindows ()
 
 
 # 2. Develop a program to perform linear transformation on an image.
-    linear transformation
+ # linear transformation
     Piece-wise Linear Transformation is type of gray level transformation that is used for image enhancement. It is a spatial domain method. It is used for manipulation of an image so that the result is more suitable than the original for a specific application.
 # a).Scaling
         In computer graphics and digital imaging, image scaling refers to the resizing of a digital image. ... When scaling a raster graphics image, a new image with a higher or lower number of pixels must be generated. In the case of decreasing the pixel number (scaling down) this usually results in a visible quality loss.
@@ -196,6 +196,7 @@ img.show()
 ![image](https://user-images.githubusercontent.com/77378707/104434947-da998a80-55b1-11eb-807b-ee98c94f7034.png)
 
 # 7. Find the neighbors matrix.
+   A pixel's neighborhood is some set of pixels, defined by their locations relative to that pixel, which is called the center pixel. The neighborhood is a rectangular block, and as you move from one element to the next in an image matrix, the neighborhood block slides in the same direction.
 
 ## code
 
