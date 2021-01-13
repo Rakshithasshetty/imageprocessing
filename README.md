@@ -137,7 +137,7 @@ cv2.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/77378707/104431815-598cc400-55ae-11eb-8582-5170772f3d47.png)
 
-# 5. convet  a color image to different color space
+# 5. convert  a color image to different color space
    ## What are color spaces?
 Color spaces are different types of color modes, used in image processing and signals and system for various purposes. Some of the common color spaces are:
 
