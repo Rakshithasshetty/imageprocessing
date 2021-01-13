@@ -65,7 +65,21 @@ c.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/77378707/104428496-9060db00-55aa-11eb-95dd-d0d589ee3bdf.png)
 
+##b).Rotation
 
-        
+import cv2 
+import numpy as np
+image = cv2.imread("image.jpg")
+gray = cv2.cvtColor(image,c.COLOR_BGR2RGB)
+h,w = image.shape[0:2]
+rotationMatrix = cv2.getRotationMatrix2D((w/2, h/2), 200, .5)
+rotated_image = cv2.warpAffine(image,rotationMatrix,(w,h))
+cv2.imshow("Fist Lab",rotated_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+#output:
+
+
      
 
