@@ -109,7 +109,8 @@ cv2.waitKey(0)
 
 ## output:
 
-![image](https://user-images.githubusercontent.com/77378707/104430506-c3a46980-55ac-11eb-948b-e9025352fbae.png)  ![image](https://user-images.githubusercontent.com/77378707/104430607-e9317300-55ac-11eb-836c-8e9e49ef876c.png)
+![image](https://user-images.githubusercontent.com/77378707/104430506-c3a46980-55ac-11eb-948b-e9025352fbae.png) 
+![image](https://user-images.githubusercontent.com/77378707/104430607-e9317300-55ac-11eb-836c-8e9e49ef876c.png)
 
 # 4. Convert color image gray scale to binary image
 Thresholding is the simplest method of image segmentation and the most common way to convert a grayscale image to a binary image. ... Here g(x, y) represents threshold image pixel at (x, y) and f(x, y) represents greyscale image pixel at (x, y).
@@ -267,7 +268,7 @@ Output calculated Neigbhors of matrix
 
 1.75	3.0	2.125	
 
-# 8. to find sum of nieghbor matrix
+# 8. To find sum of nieghbor matrix
 Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix and a cell (i, j), find sum of all elements of the matrix in constant time except the elements present at row i & column j of the matrix. Given a M x N matrix, calculate maximum sum submatrix of size k x k in a given M x N matrix in O (M*N) time. Here, 0 < k < M, N.
 ## code
 import numpy as np def sumNeighbors(M,x,y): l = [] for i in range(max(0,x-1),x+2): # max(0,x-1), such that no negative values in range() for j in range(max(0,y-1),y+2): try: t = M[i][j] l.append(t) except IndexError: # if entry doesn't exist pass return sum(l)-M[x][y] # exclude the entry itself
@@ -281,4 +282,12 @@ for i in range(M.shape[0]): for j in range(M.shape[1]): N[i][j] = sumNeighbors(M
 print("Original matrix:\n",M) print("Summed neighbors matrix:\n",N)
 
 ##  Output
-Original matrix: [[1 2 3] [4 5 6] [7 8 9]] Summed neighbors matrix: [[11. 19. 13.] [23. 40. 27.] [17. 31. 19.]]
+Original matrix: 
+[[1 2 3]
+[4 5 6] 
+[7 8 9]] 
+
+Summed neighbors matrix: 
+[[11. 19. 13.]
+[23. 40. 27.]
+[17. 31. 19.]]
