@@ -61,6 +61,7 @@ c.imshow("Fist Lab",res)
 c.waitKey(0)
 c.destroyAllWindows()
 #output:
+![image](https://user-images.githubusercontent.com/77378707/104428496-9060db00-55aa-11eb-95dd-d0d589ee3bdf.png)
 
 
         
