@@ -161,3 +161,9 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/77378707/104432764-56de9e80-55af-11eb-96be-dcd0dd8b2073.png)
 ![image](https://user-images.githubusercontent.com/77378707/104432879-78d82100-55af-11eb-9067-a644c6f3831c.png)
 ![image](https://user-images.githubusercontent.com/77378707/104433243-e2f0c600-55af-11eb-94a4-fee9756617cf.png)
+
+# 6. Develop a program to create an image from 2D array generate an array of random size.
+  A digital image is nothing more than data—numbers indicating variations of red, green, and blue at a particular location on a grid of pixels. Most of the time, we view these pixels as miniature rectangles sandwiched together on a computer screen. With a little creative thinking and some lower level manipulation of pixels with code, however, we can display that information in a myriad of ways. This tutorial is dedicated to breaking out of simple shape drawing in Processing and using images (and their pixels) as the building blocks of Processing graphics.
+# code
+
+
