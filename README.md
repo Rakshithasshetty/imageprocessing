@@ -32,7 +32,7 @@ cv2.destroyAllWindows ()
         In computer graphics and digital imaging, image scaling refers to the resizing of a digital image. ... When scaling a raster graphics image, a new image with a higher or lower number of pixels must be generated. In the case of decreasing the pixel number (scaling down) this usually results in a visible quality loss.
 ## b)Rotation 
       Image rotation is a common image processing routine with applications in matching, alignment, and other image-based algorithms. ... An image rotated by 45°. The output is the same size as the input, and the out of edge values are dropped.
-# code1
+# a)scaling 1
  import cv2 as c
 import numpy as np
 image = c.imread("image.jpg")
@@ -49,7 +49,7 @@ c.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/77378707/104428156-20525500-55aa-11eb-907b-32511e3626c7.png)
 
-#code2
+# scaling 2
 import cv2 as c
 import numpy as np
 image = c.imread("image.jpg")
@@ -83,4 +83,30 @@ cv2.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/77378707/104429179-53e1af00-55ab-11eb-9c3f-508c7d5d76ce.png)
      
+
+##3. Develop a program to find the sum and mean of a set of images
+   If the pixel values in the input images are actually vectors rather than scalar ... The overflowing pixel values might just be set to the maximum allowed value, an effect known as saturation.
+# code  
+import cv2
+import os
+path = 'D:\Pictures'
+imgs = []
+
+files = os.listdir(path)
+for file in files:
+    filepath=path+"\\"+file
+    imgs.append(cv2.imread(filepath))
+i=0
+im = []
+for im in imgs:
+   
+    im+=imgs[i]
+    i=i+1
+cv2.imshow("sum of four picturesmeanImg ", im)
+meanImg=im/len(files)
+cv2.imshow("mean of four pictures",meanImg)
+cv2.waitKey(0)
+
+# output:
+
 
