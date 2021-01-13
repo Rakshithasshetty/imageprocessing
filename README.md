@@ -116,6 +116,21 @@ cv2.waitKey(0)
 Thresholding is the simplest method of image segmentation and the most common way to convert a grayscale image to a binary image. ... Here g(x, y) represents threshold image pixel at (x, y) and f(x, y) represents greyscale image pixel at (x, y).
 
 # code
+import cv2 
+originalImage= cv2.imread("image.jpg")
+grayImage = cv2.cvtColor(originalImage, cv2.COLOR_BGR2GRAY)
+(thresh, bw_img) = cv2.threshold(originalImage, 120, 200, cv2.THRESH_BINARY)
+cv2.imshow('Original image',originalImage)
+cv2.waitKey(0)
+cv2.imshow('Gray image', grayImage)
+cv2.waitKey(0)  
+cv2.imshow('binary image', bw_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
+# output:
+![image](https://user-images.githubusercontent.com/77378707/104431519-ff8bfe80-55ad-11eb-8496-2b768687b554.png)
 
 
 
