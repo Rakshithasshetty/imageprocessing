@@ -110,5 +110,5 @@ cv2.waitKey(0)
 # output:
 
 ![image](https://user-images.githubusercontent.com/77378707/104430506-c3a46980-55ac-11eb-948b-e9025352fbae.png)
-
+![image](https://user-images.githubusercontent.com/77378707/104430607-e9317300-55ac-11eb-836c-8e9e49ef876c.png)
 
