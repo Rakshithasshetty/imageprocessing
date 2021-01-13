@@ -9,7 +9,6 @@ Import cv2
 ## Load our input image
 Image = cv2.imread ("cat.jpg")
 cv2.imshow ('Original', image)
-
 ## we use cvtColor, to convert to grayscale
 gray_image = cv2.cvtColor (image, cv2.COLOR_BGR2GRAY)
 cv2.imshow ('Grayscale', gray_image)
@@ -19,7 +18,6 @@ cv2.waitKey (0)
 cv2.destroyAllWindows ()
 
 ## output
-
 ![image](https://user-images.githubusercontent.com/77378707/104426913-96ee5300-55a8-11eb-989f-d1845ba29496.png)
 ![image](https://user-images.githubusercontent.com/77378707/104427064-cdc46900-55a8-11eb-9bff-54d046ab28a3.png)
 
