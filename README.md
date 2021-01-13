@@ -7,9 +7,9 @@ Grayscale to RGB Conversion, Grayscale to RGB Conversion - We have already defin
 # importing opencv
 Import cv2
 # Load our input image
-Image = cv2.imread ("dog.jpg")
+Image = cv2.imread ("cat.jpg")
 cv2.imshow ('Original', image)
-cv2.waitKey ()
+
 # we use cvtColor, to convert to grayscale
 gray_image = cv2.cvtColor (image, cv2.COLOR_BGR2GRAY)
 cv2.imshow ('Grayscale', gray_image)
