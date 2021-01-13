@@ -85,7 +85,9 @@ cv2.destroyAllWindows()
      
 
 # 3. Develop a program to find the sum and mean of a set of images
-   If the pixel values in the input images are actually vectors rather than scalar ... The overflowing pixel values might just be set to the maximum allowed value, an effect known as saturation.
+   In digital image processing, the sum of absolute differences (SAD) is a measure of the similarity between image blocks. It is calculated by taking the absolute difference between each pixel in the original block and the corresponding pixel in the block being used for comparison. These differences are summed to create a simple metric of block similarity, the L1 norm of the difference image or Manhattan distance between two image blocks.
+   Consider a set of scalar observation v1,…,vn. Assume we have good reasons to believe that all these values really should be the same (and equal to some unknown value t) but due to measurement errors, natural variation or some other unknown disturbances the values are not the same.
+
 ## code  
 import cv2
 import os
@@ -138,7 +140,15 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/77378707/104431815-598cc400-55ae-11eb-8582-5170772f3d47.png)
 
 # 5. convet  a color image to different color space
+   # What are color spaces?
+Color spaces are different types of color modes, used in image processing and signals and system for various purposes. Some of the common color spaces are:
 
+RGB
+CMY’K
+Y’UV
+YIQ
+Y’CbCr
+HSV
    Color space conversion is the translation of the representation of a color from one basis to another. This typically occurs in the context of converting an image that is represented in one color space to another color space, the goal being to make the translated image look as similar as possible to the original.
 ## code
 import cv2
