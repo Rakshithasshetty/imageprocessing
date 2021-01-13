@@ -183,7 +183,7 @@ cv2.waitKey(0)
 
 ![image](https://user-images.githubusercontent.com/77378707/104434230-0405e680-55b1-11eb-9f17-b0ef297b175e.png)
 
-## 7. Find the neighbors matrix.
+
 # code
 import numpy as np
 from PIL import Image
@@ -195,8 +195,10 @@ img.show()
 # output:
 ![image](https://user-images.githubusercontent.com/77378707/104434947-da998a80-55b1-11eb-807b-ee98c94f7034.png)
 
+## 7. Find the neighbors matrix.
 
 # code
+
 import numpy as np
 
 axis = 3
@@ -235,6 +237,7 @@ for i in range(0,axis):
         s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2])/8)
         print(s[i][j],end = '\t')
     print('\n')
+
 # output:
 Temp matrix
 
