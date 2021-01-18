@@ -200,7 +200,7 @@ mat = np.reshape(array,(256,256))
 img = Image.fromarray( mat , 'HSV')
 img.show()
 
-## output:
+### output:
 ![image](https://user-images.githubusercontent.com/77378707/104434947-da998a80-55b1-11eb-807b-ee98c94f7034.png)
 
 # 7. Find the neighbors matrix.
