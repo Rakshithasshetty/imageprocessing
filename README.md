@@ -187,7 +187,7 @@ img = Image.fromarray( mat , 'L')
 img.show()
 cv2.waitKey(0)
 ##  output:
-![image](https://user-images.githubusercontent.com/77378707/104434628-74146c80-55b1-11eb-9313-35f379bf65de.png)
+![image](https://user-images.githubusercontent.com/77378707/104896815-a0f3c580-599d-11eb-9c0d-fea25d56b158.png)
 
 ![image](https://user-images.githubusercontent.com/77378707/104434230-0405e680-55b1-11eb-9f17-b0ef297b175e.png)
 
