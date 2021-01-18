@@ -26,7 +26,7 @@ cv2.destroyAllWindows ()
 # 2. Develop a program to perform linear transformation on an image.
  # linear transformation
 Piece-wise Linear Transformation is type of gray level transformation that is used for image enhancement. It is a spatial domain method. It is used for manipulation of an image so that the result is more suitable than the original for a specific application.
-# a).Scaling
+# a)Scaling
 In computer graphics and digital imaging, image scaling refers to the resizing of a digital image. ... When scaling a raster graphics image, a new image with a higher or lower number of pixels must be generated. In the case of decreasing the pixel number (scaling down) this usually results in a visible quality loss.
 # b)Rotation 
 Image rotation is a common image processing routine with applications in matching, alignment, and other image-based algorithms. ... An image rotated by 45°. The output is the same size as the input, and the out of edge values are dropped.
@@ -63,7 +63,7 @@ c.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/77378707/104428496-9060db00-55aa-11eb-95dd-d0d589ee3bdf.png)
 
-## b).Rotation
+## b)Rotation
 
 import cv2 
 import numpy as np
@@ -189,7 +189,7 @@ cv2.waitKey(0)
 ##  output:
 ![image](https://user-images.githubusercontent.com/77378707/104896815-a0f3c580-599d-11eb-9c0d-fea25d56b158.png)
 
-
+![image](https://user-images.githubusercontent.com/77378707/104897062-f0d28c80-599d-11eb-9c7e-7f36af28f207.png)
 
 
 ## code
@@ -201,7 +201,7 @@ img = Image.fromarray( mat , 'HSV')
 img.show()
 
 ### output:
-![image](https://user-images.githubusercontent.com/77378707/104434947-da998a80-55b1-11eb-807b-ee98c94f7034.png)
+
 
 # 7. Find the neighbors matrix.
 A pixel's neighborhood is some set of pixels, defined by their locations relative to that pixel, which is called the center pixel. The neighborhood is a rectangular block, and as you move from one element to the next in an image matrix, the neighborhood block slides in the same direction.
