@@ -201,7 +201,7 @@ img = Image.fromarray( mat , 'HSV')
 img.show()
 
 ### output:
-
+![image](https://user-images.githubusercontent.com/77378707/104897226-224b5800-599e-11eb-9d9a-e32b610b7d0b.png)
 
 # 7. Find the neighbors matrix.
 A pixel's neighborhood is some set of pixels, defined by their locations relative to that pixel, which is called the center pixel. The neighborhood is a rectangular block, and as you move from one element to the next in an image matrix, the neighborhood block slides in the same direction.
