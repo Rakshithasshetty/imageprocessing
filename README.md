@@ -415,13 +415,21 @@ return 0;
 
 ## Output:
 Enter the row and column size for the  matrix
+
 2
+
 2
+
 Enter the elements of the matrix
+
 9
+
 8
+
 7
+
 6
+
 Enter the row and column size for the  matrix
 2
 2
