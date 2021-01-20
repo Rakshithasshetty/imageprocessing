@@ -268,7 +268,7 @@ Output calculated Neigbhors of matrix
 
 1.75	3.0	2.125	
 
-# 8. To find sum of nieghbor matrix
+# 8. Develop a program to find the sum of neighbour of each elements in the matrix
 Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix and a cell (i, j), find sum of all elements of the matrix in constant time except the elements present at row i & column j of the matrix. Given a M x N matrix, calculate maximum sum submatrix of size k x k in a given M x N matrix in O (M*N) time. Here, 0 < k < M, N.
 ## code
 import numpy as np def sumNeighbors(M,x,y): l = [] for i in range(max(0,x-1),x+2): # max(0,x-1), such that no negative values in range() for j in range(max(0,y-1),y+2): try: t = M[i][j] l.append(t) except IndexError: # if entry doesn't exist pass return sum(l)-M[x][y] # exclude the entry itself
@@ -412,6 +412,7 @@ int main()
  p * q;
 return 0;
 }
+
 ## Output:
 Enter the row and column size for the  matrix
 2
@@ -439,40 +440,5 @@ multiplication is
  69     52
  53     40
  
-Ananya Shetty
-14:53 (2 minutes ago)
-to me, dashwithamonteiro
 
-## 9.Develop a program to find the sum of neighbour of each elements in the matrix
-#The numpy.zeros() function returns a new array of given shape and type, with zeros.append () Syntax: list_name.append (‘value’) It takes only one argument. This function appends the incoming element to the end of the list as a single new element.
 
-import numpy as np
-M = [[1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]]
-M = np.asarray(M)
-N = np.zeros(M.shape)
-def sumNeighbors(M,x,y):
-    l = []
-    for i in range(max(0,x-1),x+2):
-        for j in range(max(0,y-1),y+2):
-            try:
-                t = M[i][j]
-                l.append(t)
-            except IndexError:
-                pass
-    return sum(l)-M[x][y]
-for i in range(M.shape[0]):
-    for j in range(M.shape[1]):
-        N[i][j] = sumNeighbors(M, i, j)
-print ("Original matrix:\n", M)
-print ("Summed neighbors matrix:\n", N)
-## Output:
-Original matrix:
- [[1 2 3]
- [4 5 6]
- [7 8 9]]
-Summed neighbors matrix:
- [[11. 19. 13.]
- [23. 40. 27.]
- [17. 31. 19.]]
