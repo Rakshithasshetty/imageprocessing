@@ -431,21 +431,37 @@ Enter the elements of the matrix
 6
 
 Enter the row and column size for the  matrix
+
 2
+
 2
+
 Enter the elements of the matrix
+
 5
+
 4
+
 3
+
 2
+
 addition is
+
  14      12
+ 
  10      8
+ 
 subtraction is
+
  4      4
+ 
  4      4
+ 
 multiplication is
+
  69     52
+ 
  53     40
  
 
