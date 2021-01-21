@@ -32,6 +32,8 @@ In computer graphics and digital imaging, image scaling refers to the resizing o
 # b)Rotation 
 Image rotation is a common image processing routine with applications in matching, alignment, and other image-based algorithms. ... An image rotated by 45°. The output is the same size as the input, and the out of edge values are dropped.
 ## a)scaling 1
+
+```
 import cv2 as c
 import numpy as np
 image = c.imread("image.jpg")
@@ -43,12 +45,13 @@ res = c.resize(image,(width,hight))
 c.imshow("Fist Lab",res)
 c.waitKey(0)
 c.destroyAllWindows()
-
+```
 ## output:
 
 ![image](https://user-images.githubusercontent.com/77378707/104428156-20525500-55aa-11eb-907b-32511e3626c7.png)
 
 ## scaling 2
+```
 import cv2 as c
 import numpy as np
 image = c.imread("image.jpg")
@@ -60,12 +63,13 @@ res = c.resize(image,(width,hight))
 c.imshow("Fist Lab",res)
 c.waitKey(0)
 c.destroyAllWindows()
+```
 ## output:
 
 ![image](https://user-images.githubusercontent.com/77378707/104428496-9060db00-55aa-11eb-95dd-d0d589ee3bdf.png)
 
 ## b)Rotation
-
+```
 import cv2 
 import numpy as np
 image = cv2.imread("image.jpg")
@@ -76,7 +80,7 @@ rotated_image = cv2.warpAffine(image,rotationMatrix,(w,h))
 cv2.imshow("Fist Lab",rotated_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 ## output:
 
 
@@ -87,7 +91,8 @@ cv2.destroyAllWindows()
 In digital image processing, the sum of absolute differences (SAD) is a measure of the similarity between image blocks. It is calculated by taking the absolute difference between each pixel in the original block and the corresponding pixel in the block being used for comparison. These differences are summed to create a simple metric of block similarity, the L1 norm of the difference image or Manhattan distance between two image blocks.
 Consider a set of scalar observation v1,…,vn. Assume we have good reasons to believe that all these values really should be the same (and equal to some unknown value t) but due to measurement errors, natural variation or some other unknown disturbances the values are not the same.
 
-## code  
+## code
+```
 import cv2
 import os
 path = 'D:\Pictures'
@@ -107,7 +112,7 @@ cv2.imshow("sum of four picturesmeanImg ", im)
 meanImg=im/len(files)
 cv2.imshow("mean of four pictures",meanImg)
 cv2.waitKey(0)
-
+```
 ## output:
 
 ![image](https://user-images.githubusercontent.com/77378707/104430506-c3a46980-55ac-11eb-948b-e9025352fbae.png) 
@@ -117,6 +122,7 @@ cv2.waitKey(0)
 Thresholding is the simplest method of image segmentation and the most common way to convert a grayscale image to a binary image. ... Here g(x, y) represents threshold image pixel at (x, y) and f(x, y) represents greyscale image pixel at (x, y).
 
 ## code
+```
 import cv2 
 originalImage= cv2.imread("image.jpg")
 grayImage = cv2.cvtColor(originalImage, cv2.COLOR_BGR2GRAY)
@@ -128,7 +134,7 @@ cv2.waitKey(0)
 cv2.imshow('binary image', bw_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 
 ## output:
 ![image](https://user-images.githubusercontent.com/77378707/104431519-ff8bfe80-55ad-11eb-8496-2b768687b554.png)
