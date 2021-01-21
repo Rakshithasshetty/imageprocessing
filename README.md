@@ -66,7 +66,7 @@ c.destroyAllWindows()
 ```
 ## output:
 
-![image](https://user-images.githubusercontent.com/77378707/104428496-9060db00-55aa-11eb-95dd-d0d589ee3bdf.png)
+![image](https://user-images.githubusercontent.com/77378707/105331179-29ba6d80-5bf9-11eb-90c6-2e0a60874197.png)
 
 ## b)Rotation
 ```
@@ -84,7 +84,7 @@ cv2.destroyAllWindows()
 ## output:
 
 
-![image](https://user-images.githubusercontent.com/77378707/104429179-53e1af00-55ab-11eb-9c3f-508c7d5d76ce.png)
+
      
 
 # 3. Develop a program to find the sum and mean of a set of images
