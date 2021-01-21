@@ -82,6 +82,11 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 ## output:
+![image](https://user-images.githubusercontent.com/77378707/105331350-5e2e2980-5bf9-11eb-92eb-64b8b5f7ccba.png)
+
+
+
+
 
 
 
@@ -115,8 +120,8 @@ cv2.waitKey(0)
 ```
 ## output:
 
-![image](https://user-images.githubusercontent.com/77378707/104430506-c3a46980-55ac-11eb-948b-e9025352fbae.png) 
-![image](https://user-images.githubusercontent.com/77378707/104430607-e9317300-55ac-11eb-836c-8e9e49ef876c.png)
+![image](https://user-images.githubusercontent.com/77378707/105331378-67b79180-5bf9-11eb-8f2c-1fbe327fb1a2.png)
+![image](https://user-images.githubusercontent.com/77378707/105331414-6ede9f80-5bf9-11eb-83d7-60edd3e5e992.png)
 
 # 4. Convert color image gray scale to binary image
    Thresholding is the simplest method of image segmentation and the most common way to convert a grayscale image to a binary image. ... Here g(x, y) represents threshold image pixel at (x, y) and f(x, y) represents greyscale image pixel at (x, y).
@@ -137,12 +142,9 @@ cv2.destroyAllWindows()
 ```
 
 ## output:
-![image](https://user-images.githubusercontent.com/77378707/104431519-ff8bfe80-55ad-11eb-8496-2b768687b554.png)
-
-
-![image](https://user-images.githubusercontent.com/77378707/104431720-395d0500-55ae-11eb-8838-fcae3087fbee.png)
-
-![image](https://user-images.githubusercontent.com/77378707/104431815-598cc400-55ae-11eb-8582-5170772f3d47.png)
+![image](https://user-images.githubusercontent.com/77378707/105331448-79993480-5bf9-11eb-9c67-2177fc6bf15e.png)
+![image](https://user-images.githubusercontent.com/77378707/105331480-83229c80-5bf9-11eb-98d1-05c8988e47de.png)
+![image](https://user-images.githubusercontent.com/77378707/105331508-8ae24100-5bf9-11eb-9a38-31d6c604a2b8.png)
 
 # 5. convert  a color image to different color space
    ## What are color spaces?
