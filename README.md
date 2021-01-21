@@ -119,7 +119,7 @@ cv2.waitKey(0)
 ![image](https://user-images.githubusercontent.com/77378707/104430607-e9317300-55ac-11eb-836c-8e9e49ef876c.png)
 
 # 4. Convert color image gray scale to binary image
-Thresholding is the simplest method of image segmentation and the most common way to convert a grayscale image to a binary image. ... Here g(x, y) represents threshold image pixel at (x, y) and f(x, y) represents greyscale image pixel at (x, y).
+   Thresholding is the simplest method of image segmentation and the most common way to convert a grayscale image to a binary image. ... Here g(x, y) represents threshold image pixel at (x, y) and f(x, y) represents greyscale image pixel at (x, y).
 
 ## code
 ```
@@ -283,7 +283,11 @@ Output calculated Neigbhors of matrix
 Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix and a cell (i, j), find sum of all elements of the matrix in constant time except the elements present at row i & column j of the matrix. Given a M x N matrix, calculate maximum sum submatrix of size k x k in a given M x N matrix in O (M*N) time. Here, 0 < k < M, N.
 ## code
 ```
-import numpy as np def sumNeighbors(M,x,y): l = [] for i in range(max(0,x-1),x+2): # max(0,x-1), such that no negative values in range() for j in range(max(0,y-1),y+2): try: t = M[i][j] l.append(t) except IndexError: # if entry doesn't exist pass return sum(l)-M[x][y] # exclude the entry itself
+import numpy as np def sumNeighbors(M,x,y): l = [] for i in range(max(0,x-1),x+2): 
+# max(0,x-1), such that no negative values in range() for j in range(max(0,y-1),y+2): 
+try: t = M[i][j] l.append(t) except IndexError: 
+# if entry doesn't exist pass return sum(l)-M[x][y]
+# exclude the entry itself
 
 M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
@@ -343,7 +347,7 @@ cv2.waitKey(0)
 ![image](https://user-images.githubusercontent.com/77378707/105326562-e0b3ea80-5bf3-11eb-9f47-42d3f2e631cd.png)
 ![image](https://user-images.githubusercontent.com/77378707/105326596-e90c2580-5bf3-11eb-91ef-c4460331677b.png)
 
-# 10.develop a program to implement brightness thresholding.
+# 10.Develop a program to implement brightness thresholding.
 The simplest thresholding methods replace each pixel in an image with a black pixel if the image intensity I i,j is less than some fixed constant T (that is, {\displaystyle Ii,j< T Ii,j < T, or a white pixel if the image intensity is greater than that constant. In the example image on the right, this results in the dark tree becoming completely black, and the white snow becoming completely white.
 
 ## code
@@ -375,7 +379,7 @@ if cv2.waitKey(0) & 0xff == 27:
 ![image](https://user-images.githubusercontent.com/77378707/105324771-dabd0a00-5bf1-11eb-8c88-398455eebf22.png)
 ![image](https://user-images.githubusercontent.com/77378707/105324886-fd4f2300-5bf1-11eb-871c-a346bdd82263.png)
 
-# 11.program to implement contrast enchancement.
+# 11.Program to implement contrast enchancement.
 Image enhancement techniques have been widely used in many applications of image processing where the subjective quality of images is important for human interpretation. Contrast is an important factor in any subjective evaluation of image quality. Contrast is created by the difference in luminance reflected from two adjacent surfaces. In other words, contrast is the difference in visual properties that makes an object distinguishable from other objects and the background. In visual perception, contrast is determined by the difference in the colour and brightness of the object with other objects. Our visual system is more sensitive to contrast than absolute luminance; therefore, we can perceive the world similarly regardless of the considerable changes in illumination conditions. Many algorithms for accomplishing contrast enhancement have been developed and applied to problems in image processing.
 ## code
 ```
@@ -388,3 +392,36 @@ img.enhance(2.0).show()
 ## output:
 ![image](https://user-images.githubusercontent.com/77378707/105329329-0b537280-5bf7-11eb-8bc3-c7f6a1b25139.png)
 ![image](https://user-images.githubusercontent.com/77378707/105329391-1d351580-5bf7-11eb-981c-0713df32f1ce.png)
+
+# Program to implement power law(gamma) transformation.
+A variety of devices for image capture, printing, and display respond according to a power law. The exponent in power law equation is referred to as gamma Þ process used to correct this power law response phenomena is called gamma correction. eg. CRT devices have intensity.
+Gamma correction is extremely important as use of digital images for commercial purposes over the internet has increased.
+There are further two transformation is power law transformations, that include nth power and nth root transformation. These transformations can be given by the expression:
+
+s=cr^γ
+
+This symbol γ is called gamma, due to which this transformation is also known as gamma transformation.
+
+Variation in the value of γ varies the enhancement of the images. Different display devices / monitors have their own gamma correction, that’s why they display their image at different intensity.
+
+This type of transformation is used for enhancing images for different type of display devices. The gamma of different display devices is different. For example Gamma of CRT lies in between of 1.8 to 2.5, that means the image displayed on CRT is dark.
+
+Correcting gamma.
+s=cr^γ
+
+s=cr^(1/2.5)
+
+The same image but with different gamma values has been shown here.
+## code
+```
+import numpy as np
+import cv2
+img = cv2.imread('apple.jpg')
+gamma_two_point_two = np.array(230*(img/255)**2.1,dtype='uint8')
+gamma_point_four = np.array(255*(img/255)**0.1,dtype='uint8')
+img3 = cv2.hconcat([gamma_two_point_two,gamma_point_four])
+cv2.imshow('a2',img3)
+cv2.waitKey(0)
+```
+## output: 
+
