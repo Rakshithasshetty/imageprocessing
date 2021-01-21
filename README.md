@@ -156,6 +156,7 @@ Y’CbCr
 HSV
 Color space conversion is the translation of the representation of a color from one basis to another. This typically occurs in the context of converting an image that is represented in one color space to another color space, the goal being to make the translated image look as similar as possible to the original.
 ## code
+```
 import cv2
 image=cv2.imread('cat.jpg')
 cv2.imshow('pic',image)
@@ -170,7 +171,7 @@ image3 = cv2.cvtColor(image,cv2.COLOR_RGB2YUV)
 cv2.imshow('img2',image3)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 ## output:
 ![image](https://user-images.githubusercontent.com/77378707/104432582-2e56a480-55af-11eb-87b1-ae2d8f8e84ca.png)
 ![image](https://user-images.githubusercontent.com/77378707/104432764-56de9e80-55af-11eb-96be-dcd0dd8b2073.png)
@@ -180,6 +181,7 @@ cv2.destroyAllWindows()
 # 6. Develop a program to create an image from 2D array generate an array of random size.
 A digital image is nothing more than data—numbers indicating variations of red, green, and blue at a particular location on a grid of pixels. Most of the time, we view these pixels as miniature rectangles sandwiched together on a computer screen. With a little creative thinking and some lower level manipulation of pixels with code, however, we can display that information in a myriad of ways. This tutorial is dedicated to breaking out of simple shape drawing in Processing and using images (and their pixels) as the building blocks of Processing graphics.
 ## code
+```
 import numpy as np
 from PIL import Image
 import cv2
@@ -193,6 +195,7 @@ mat = np.reshape(array,(256,256))
 img = Image.fromarray( mat , 'L')
 img.show()
 cv2.waitKey(0)
+```
 ##  output:
 ![image](https://user-images.githubusercontent.com/77378707/104896815-a0f3c580-599d-11eb-9c0d-fea25d56b158.png)
 
@@ -200,13 +203,14 @@ cv2.waitKey(0)
 
 
 ## code
+```
 import numpy as np
 from PIL import Image
 array = np.linspace(0,1,256*256)
 mat = np.reshape(array,(256,256))
 img = Image.fromarray( mat , 'HSV')
 img.show()
-
+```
 ### output:
 ![image](https://user-images.githubusercontent.com/77378707/104897226-224b5800-599e-11eb-9d9a-e32b610b7d0b.png)
 
@@ -214,7 +218,7 @@ img.show()
 A pixel's neighborhood is some set of pixels, defined by their locations relative to that pixel, which is called the center pixel. The neighborhood is a rectangular block, and as you move from one element to the next in an image matrix, the neighborhood block slides in the same direction.
 
 ## code
-
+```
 import numpy as np
 
 axis = 3
@@ -253,7 +257,7 @@ for i in range(0,axis):
         s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2])/8)
         print(s[i][j],end = '\t')
     print('\n')
-
+```
 ## output:
 Temp matrix
 
@@ -278,6 +282,7 @@ Output calculated Neigbhors of matrix
 # 8. Develop a program to find the sum of neighbour of each elements in the matrix
 Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix and a cell (i, j), find sum of all elements of the matrix in constant time except the elements present at row i & column j of the matrix. Given a M x N matrix, calculate maximum sum submatrix of size k x k in a given M x N matrix in O (M*N) time. Here, 0 < k < M, N.
 ## code
+```
 import numpy as np def sumNeighbors(M,x,y): l = [] for i in range(max(0,x-1),x+2): # max(0,x-1), such that no negative values in range() for j in range(max(0,y-1),y+2): try: t = M[i][j] l.append(t) except IndexError: # if entry doesn't exist pass return sum(l)-M[x][y] # exclude the entry itself
 
 M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -287,7 +292,7 @@ M = np.asarray(M) N = np.zeros(M.shape)
 for i in range(M.shape[0]): for j in range(M.shape[1]): N[i][j] = sumNeighbors(M, i, j)
 
 print("Original matrix:\n",M) print("Summed neighbors matrix:\n",N)
-
+```
 ##  Output
 Original matrix: 
 
@@ -305,9 +310,26 @@ Summed neighbors matrix:
 
 [17. 31. 19.]]
 
-# Develop a program to implement  Negative transformation
-## code
+# 9.Develop a program to implement  Negative transformation
 
+### Image Negatives (Negative Transformation)
+The negative of an image with gray level in the range
+[0, L-1], where L = Largest value in an image, is
+obtained by using the negative transformation’s
+expression:
+s = L – 1 – r
+Which reverses the intensity levels of an input
+image , in this manner produces the equivalent of a
+photographic negative.
+The negative transformation is suitable for enhancing
+white or gray detail embedded in dark regions of an
+image, especially when the black area are dominant
+in size
+Advantages of negative :
+  Produces an equivalent of a photographic negative.
+  Enhances white or gray detail embedded in dark regions.
+## code
+```
   import cv2
 import numpy as np
 img=cv2.imread('cat.jpg')
@@ -316,12 +338,17 @@ cv2.waitKey(0)
 img_neg=255-img
 cv2.imshow('negative',img_neg)
 cv2.waitKey(0)
-
+```
 ## output:
 ![image](https://user-images.githubusercontent.com/77378707/105326562-e0b3ea80-5bf3-11eb-9f47-42d3f2e631cd.png)
 ![image](https://user-images.githubusercontent.com/77378707/105326596-e90c2580-5bf3-11eb-91ef-c4460331677b.png)
 
+# 10.develop a program to implement brightness thresholding.
+The simplest thresholding methods replace each pixel in an image with a black pixel if the image intensity I i,j is less than some fixed constant T (that is, {\displaystyle Ii,j< T Ii,j < T, or a white pixel if the image intensity is greater than that constant. In the example image on the right, this results in the dark tree becoming completely black, and the white snow becoming completely white.
 
+## code
+
+```
 import cv2  
 import numpy as np  
 image1 = cv2.imread('apple.jpg')  
@@ -341,9 +368,21 @@ cv2.imshow('Set to 0 Inverted', thresh5)
   
 if cv2.waitKey(0) & 0xff == 27:  
     cv2.destroyAllWindows()  
-
+```
 ![image](https://user-images.githubusercontent.com/77378707/105324526-8dd93380-5bf1-11eb-951d-684f09bd0c31.png)
 ![image](https://user-images.githubusercontent.com/77378707/105324574-99c4f580-5bf1-11eb-8833-26164b841faf.png)
 ![image](https://user-images.githubusercontent.com/77378707/105324609-a3e6f400-5bf1-11eb-9a87-2f525afa6cb6.png)
 ![image](https://user-images.githubusercontent.com/77378707/105324771-dabd0a00-5bf1-11eb-8c88-398455eebf22.png)
 ![image](https://user-images.githubusercontent.com/77378707/105324886-fd4f2300-5bf1-11eb-871c-a346bdd82263.png)
+
+# 11.program to implement contrast enchancement.
+Image enhancement techniques have been widely used in many applications of image processing where the subjective quality of images is important for human interpretation. Contrast is an important factor in any subjective evaluation of image quality. Contrast is created by the difference in luminance reflected from two adjacent surfaces. In other words, contrast is the difference in visual properties that makes an object distinguishable from other objects and the background. In visual perception, contrast is determined by the difference in the colour and brightness of the object with other objects. Our visual system is more sensitive to contrast than absolute luminance; therefore, we can perceive the world similarly regardless of the considerable changes in illumination conditions. Many algorithms for accomplishing contrast enhancement have been developed and applied to problems in image processing.
+## code
+```
+from PIL import Image, ImageEnhance
+img = Image.open("car.jpg")
+img.show()
+img=ImageEnhance.Color(img)
+img.enhance(2.0).show()
+```
+## output:
