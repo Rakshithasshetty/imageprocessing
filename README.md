@@ -311,6 +311,8 @@ cv2.imshow('negative',img_neg)
 cv2.waitKey(0)
 
 ## output:
+![image](https://user-images.githubusercontent.com/77378707/105326562-e0b3ea80-5bf3-11eb-9f47-42d3f2e631cd.png)
+![image](https://user-images.githubusercontent.com/77378707/105326596-e90c2580-5bf3-11eb-91ef-c4460331677b.png)
 
 
 import cv2  
