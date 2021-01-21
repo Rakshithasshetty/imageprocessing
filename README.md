@@ -298,8 +298,20 @@ Summed neighbors matrix:
 
 [17. 31. 19.]]
 
-# Negative transformation
+# Develop a program to implement  Negative transformation
 ## code
+
+  import cv2
+import numpy as np
+img=cv2.imread('cat.jpg')
+cv2.imshow('original',img)
+cv2.waitKey(0)
+img_neg=255-img
+cv2.imshow('negative',img_neg)
+cv2.waitKey(0)
+
+## output:
+
 
 import cv2  
 import numpy as np  
