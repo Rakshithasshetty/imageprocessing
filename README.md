@@ -298,3 +298,12 @@ Summed neighbors matrix:
 
 [17. 31. 19.]]
 
+
+
+
+![image](https://user-images.githubusercontent.com/77378707/105324526-8dd93380-5bf1-11eb-951d-684f09bd0c31.png)
+![image](https://user-images.githubusercontent.com/77378707/105324574-99c4f580-5bf1-11eb-8833-26164b841faf.png)
+![image](https://user-images.githubusercontent.com/77378707/105324609-a3e6f400-5bf1-11eb-9a87-2f525afa6cb6.png)
+![image](https://user-images.githubusercontent.com/77378707/105324771-dabd0a00-5bf1-11eb-8c88-398455eebf22.png)
+![image](https://user-images.githubusercontent.com/77378707/105324812-e7d9f900-5bf1-11eb-9cfc-13d9c45c59c8.png)
+![image](https://user-images.githubusercontent.com/77378707/105324886-fd4f2300-5bf1-11eb-871c-a346bdd82263.png)
