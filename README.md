@@ -395,7 +395,7 @@ img.enhance(2.0).show()
 ![image](https://user-images.githubusercontent.com/77378707/105329329-0b537280-5bf7-11eb-8bc3-c7f6a1b25139.png)
 ![image](https://user-images.githubusercontent.com/77378707/105329391-1d351580-5bf7-11eb-981c-0713df32f1ce.png)
 
-# Program to implement power law(gamma) transformation.
+# 12.Program to implement power law(gamma) transformation.
 A variety of devices for image capture, printing, and display respond according to a power law. The exponent in power law equation is referred to as gamma Þ process used to correct this power law response phenomena is called gamma correction. eg. CRT devices have intensity.
 Gamma correction is extremely important as use of digital images for commercial purposes over the internet has increased.
 There are further two transformation is power law transformations, that include nth power and nth root transformation. These transformations can be given by the expression:
