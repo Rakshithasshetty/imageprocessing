@@ -285,36 +285,21 @@ Output calculated Neigbhors of matrix
 Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix and a cell (i, j), find sum of all elements of the matrix in constant time except the elements present at row i & column j of the matrix. Given a M x N matrix, calculate maximum sum submatrix of size k x k in a given M x N matrix in O (M*N) time. Here, 0 < k < M, N.
 ## code
 ```
-import numpy as np def sumNeighbors(M,x,y): l = [] for i in range(max(0,x-1),x+2): 
-# max(0,x-1), such that no negative values in range() for j in range(max(0,y-1),y+2): 
-try: t = M[i][j] l.append(t) except IndexError: 
-# if entry doesn't exist pass return sum(l)-M[x][y]
-# exclude the entry itself
-
-M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-
-M = np.asarray(M) N = np.zeros(M.shape)
-
-for i in range(M.shape[0]): for j in range(M.shape[1]): N[i][j] = sumNeighbors(M, i, j)
-
-print("Original matrix:\n",M) print("Summed neighbors matrix:\n",N)
+import numpy as np
+ini_array = np.array([[1, 2,5, 3], [4,5, 4, 7], [9, 6, 1,0]])
+print("initial_array : ", str(ini_array));
+def neighbors(radius, rowNumber, columnNumber):
+    return[[ini_array[i][j]if i >= 0 and i < len(ini_array) and j >= 0 and j < len(ini_array[0]) else 0
+            for j in range(columnNumber-1-radius, columnNumber+radius)]
+           for i in range(rowNumber-1-radius, rowNumber+radius)]
+neighbors(1, 2, 2)
 ```
 ##  Output
-Original matrix: 
+initial_array :  [[1 2 5 3]
+ [4 5 4 7]
+ [9 6 1 0]]
+[[1, 2, 5], [4, 5, 4], [9, 6, 1]]
 
-[[1 2 3]
-
-[4 5 6] 
-
-[7 8 9]] 
-
-Summed neighbors matrix: 
-
-[[11. 19. 13.]
-
-[23. 40. 27.]
-
-[17. 31. 19.]]
 
 # 9.Develop a program to implement  Negative transformation
 
