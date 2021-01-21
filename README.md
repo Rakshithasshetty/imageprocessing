@@ -5,6 +5,7 @@ A grayscale (or graylevel) image is simply one in which the only colors are shad
 Grayscale to RGB Conversion, Grayscale to RGB Conversion - We have already define the RGB color model and gray scale format in our tutorial of Image types. Now we will convert an color​  Average method is the most simple one. You just have to take the average of three colors. Since its an RGB image, so it means that you have add r with g with b and then divide it by 3 to get your desired grayscale image. Its done in this way.
 ## code
 ## importing opencv
+```
 Import cv2
 ## Load our input image
 Image = cv2.imread ("cat.jpg")
@@ -16,7 +17,7 @@ cv2.imwrite(‘graying.jpg’, gray_image)
 cv2.waitKey (0)
 ## Window shown waits for any key pressing event
 cv2.destroyAllWindows ()
-
+```
 ## output
 ![image](https://user-images.githubusercontent.com/77378707/104426913-96ee5300-55a8-11eb-989f-d1845ba29496.png)
 ![image](https://user-images.githubusercontent.com/77378707/104427064-cdc46900-55a8-11eb-9bff-54d046ab28a3.png)
