@@ -424,4 +424,4 @@ cv2.imshow('a2',img3)
 cv2.waitKey(0)
 ```
 ## output: 
-
+![image](https://user-images.githubusercontent.com/77378707/105330801-ba447e00-5bf8-11eb-8cf6-97563d01046e.png)
