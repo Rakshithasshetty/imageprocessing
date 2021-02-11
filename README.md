@@ -412,3 +412,28 @@ cv2.waitKey(0)
 ```
 ## output: 
 ![image](https://user-images.githubusercontent.com/77378707/105330801-ba447e00-5bf8-11eb-8cf6-97563d01046e.png)
+
+
+# 13.histogram of an image:
+   a)through your code
+   b)through the built in function
+   c)to verify a) and b) are one and the same.
+   
+ ## code
+ #by Code
+import cv2
+from matplotlib import pyplot as plt
+img = cv2.imread('img1.jpg',0)
+histr = cv2.calcHist([img],[0],None,[256],[0,256])
+plt.plot(histr)
+plt.show()
+#by function
+import cv2
+from matplotlib import pyplot as plt
+img = cv2.imread('img1.jpg',0)
+plt.hist(img.ravel(),256,[0,256])
+plt.show()
+
+
+  
+
