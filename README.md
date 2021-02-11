@@ -578,7 +578,9 @@ plt.title('close image')
 plt.imshow(cv2.cvtColor(close, cv2.COLOR_BGR2RGB))
 plt.show()
 
-
+![image](https://user-images.githubusercontent.com/77378707/107619989-02941080-6c7a-11eb-9ca8-a8c703222f57.png)
+![image](https://user-images.githubusercontent.com/77378707/107620014-0de73c00-6c7a-11eb-84d5-b22cc1fe4549.png)
+![image](https://user-images.githubusercontent.com/77378707/107620032-16d80d80-6c7a-11eb-820a-9e55eb03a3c9.png)
 
 
 
