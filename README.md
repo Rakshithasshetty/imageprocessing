@@ -489,6 +489,7 @@ cv2.destroyAllWindows()
 
 # 15. program for gray level slicing with an without background.
  ## code
+  ### with background
  import cv2
 import numpy as np
 from matplotlib import pyplot as plt
@@ -506,5 +507,25 @@ plt.title('Original ||   Graylevel slicing with background')
 plt.imshow(equ,'gray')
 plt.show()
 
+![image](https://user-images.githubusercontent.com/77378707/107618990-71706a00-6c78-11eb-9c61-668eeb89746f.png)
+
+### without background
+import cv2 as cv
+import numpy as np
+from matplotlib import pyplot as plt
+
+image=cv2.imread('app.jpg',0)
+x,y=image.shape
+z=np.zeros((x,y))
+for i in range(0,x):
+    for j in range(0,y):
+        if(image[i][j]>50 and image[i][j]<150):
+            z[i][j]=255
+        else:
+            z[i][j]=0
+equ=np.hstack((image,z))
+plt.title('Original ||  Graylevel slicing w/o background')
+plt.imshow(equ,'gray')
+plt.show()
 
 
