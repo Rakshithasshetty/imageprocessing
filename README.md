@@ -461,4 +461,24 @@ cv2.imshow('Subtracted Image', sub)
 if cv2.waitKey(0) & 0xff == 27:  
     cv2.destroyAllWindows() 
     
+![image](https://user-images.githubusercontent.com/77378707/107618006-d9be4c00-6c76-11eb-97f0-e3d1caa84709.png)
+
+# logical operations
+import cv2
+img1 = cv2.imread("app.jpg")
+img2 = cv2.imread("chrome.jpg")
+bitwise_and = cv2.bitwise_and(img2, img1)
+cv2.imshow("bit_and", bitwise_and)
+bitwise_or = cv2.bitwise_or(img2, img1)
+cv2.imshow("bitwise_or", bitwise_or)
+bitwise_xor = cv2.bitwise_xor(img2, img1)
+cv2.imshow("bitwise_xor", bitwise_xor)
+bitwise_not = cv2.bitwise_not(img1)
+cv2.imshow("bitwise_not1", bitwise_not)
+bitwise_not = cv2.bitwise_not(img2)
+cv2.imshow("bitwise_not2", bitwise_not)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
     
