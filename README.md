@@ -434,6 +434,6 @@ img = cv2.imread('img1.jpg',0)
 plt.hist(img.ravel(),256,[0,256])
 plt.show()
 
-
+![image](https://user-images.githubusercontent.com/77378707/107616896-e641a500-6c74-11eb-9233-b585000a9d3c.png)
   
 
