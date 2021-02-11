@@ -414,7 +414,7 @@ cv2.waitKey(0)
 ![image](https://user-images.githubusercontent.com/77378707/105330801-ba447e00-5bf8-11eb-8cf6-97563d01046e.png)
 
 
-# 13.histogram of an image:
+# 13.Histogram of an image:
    a)through your code
    b)through the built in function
    c)to verify a) and b) are one and the same.
@@ -433,7 +433,19 @@ from matplotlib import pyplot as plt
 img = cv2.imread('img1.jpg',0)
 plt.hist(img.ravel(),256,[0,256])
 plt.show()
-
+# output:
 ![image](https://user-images.githubusercontent.com/77378707/107616896-e641a500-6c74-11eb-9233-b585000a9d3c.png)
   
 ![image](https://user-images.githubusercontent.com/77378707/107616976-0b361800-6c75-11eb-8388-ce119f483188.png)
+
+# 14.program to enhance image using image arithmetic and logicb operations.
+  ## Addition
+import cv2  
+import numpy as np  
+image1 = cv2.imread('app.jpg')  
+image2 = cv2.imread('chrome.jpg')
+weightedSum = cv2.addWeighted(image1, 0.5, image2, 0.4, 0)
+cv2.imshow('Weighted Image', weightedSum)
+if cv2.waitKey(0) & 0xff == 25:  
+    cv2.destroyAllWindows() 
+
