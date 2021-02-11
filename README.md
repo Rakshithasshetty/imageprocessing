@@ -588,6 +588,28 @@ show()
 # 17. To perform following operation in an image 
    ##  1.opening
    ##  2.closing
+   Opening and closing are two important operators from mathematical morphology. They are both derived from the fundamental operations of erosion and deletion. Like those operators they are normally applied to binary images, although there are also graylevel versions.  Opening is generally used to remove small objects from the foreground (usually taken as the bright pixels) of an image, placing them in the background whereas Closing is generally used to remove small holes in the foreground, changing small islands of background into foreground.
+
+The combination of opening and closing is generally used to clean up artifacts in the segmented image before using the image for digital analysis.
+
+## What You Need To Know About Opening In Digital Image Processing
+Opening is a process in which first erosion operation is performed and then dilation operation is performed.
+Opening removes small objects from the foreground (usually taken as the bright pixels) of an image, placing them in the background.
+Opening preserves the shape and size of larger objects in the image.
+Opening is used for removing internal noise of the obtained image.
+Opening eliminates the thin protrusions of the obtained image.
+The opening operation erodes an image and then dilates the eroded image using the same structuring element for both operations.
+Operation performed on X & Y is represented by (AoB).
+Opening operation performed on X & Y is the union of all translations of Y that fit entirely within X.
+## What You Need To Know About Closing In Digital Image Processing
+Closing is a process in which first dilation operation is performed and then erosion operation is performed.
+Closing removes small holes in the foreground, changing small islands of background into foreground.
+Closing preserves the shape and size of larger objects in the image.
+Closing is used for smoothening of contour and fusing of narrow breaks.
+Closing eliminates the small holes from the obtained image.
+The closing operation dilates an image and then erodes the dilated image, using the same structuring element for both operations.
+Closing operation performed on X & Y is represented by (A.B).
+Closing operation performed on X & Y is the complement of the union of all translations of Y that do not fit entirely within X.
 ```
 import cv2
 import numpy as np
