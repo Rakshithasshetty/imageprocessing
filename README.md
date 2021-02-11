@@ -449,3 +449,16 @@ cv2.imshow('Weighted Image', weightedSum)
 if cv2.waitKey(0) & 0xff == 25:  
     cv2.destroyAllWindows() 
 
+![image](https://user-images.githubusercontent.com/77378707/107617825-9663dd80-6c76-11eb-9a5b-04ec000a1aa8.png)
+
+  # Subtract
+ import cv2  
+import numpy as np  
+image1 = cv2.imread('chrome.jpg')  
+image2 = cv2.imread('app.jpg')
+sub = cv2.subtract(image1, image2)
+cv2.imshow('Subtracted Image', sub)
+if cv2.waitKey(0) & 0xff == 27:  
+    cv2.destroyAllWindows() 
+    
+    
