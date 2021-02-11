@@ -418,9 +418,21 @@ cv2.waitKey(0)
    a)through your code
    b)through the built in function
    c)to verify a) and b) are one and the same.
-   
+ A histogram is a graph. A graph that shows frequency of anything. Usually histogram have bars that represent frequency of occurring of data in the whole data set.
+A Histogram has two axis the x axis and the y axis.
+The x axis contains event whose frequency you have to count.
+The y axis contains frequency.
+The different heights of bar shows different frequency of occurrence of data.  
+
+Applications of Histograms
+
+Histograms has many uses in image processing. The first use as it has also been discussed above is the analysis of the image. We can predict about an image by just looking at its histogram. Its like looking an x ray of a bone of a body.
+The second use of histogram is for brightness purposes. The histograms has wide application in image brightness. Not only in brightness, but histograms are also used in adjusting contrast of an image.
+Another important use of histogram is to equalize an image.
+And last but not the least, histogram has wide use in thresholding. This is mostly used in computer vision.
  ## code
- #by Code
+ ##by Code
+```
 import cv2
 from matplotlib import pyplot as plt
 img = cv2.imread('img1.jpg',0)
@@ -433,13 +445,17 @@ from matplotlib import pyplot as plt
 img = cv2.imread('img1.jpg',0)
 plt.hist(img.ravel(),256,[0,256])
 plt.show()
+```
 # output:
 ![image](https://user-images.githubusercontent.com/77378707/107616896-e641a500-6c74-11eb-9233-b585000a9d3c.png)
   
 ![image](https://user-images.githubusercontent.com/77378707/107616976-0b361800-6c75-11eb-8388-ce119f483188.png)
 
-# 14.program to enhance image using image arithmetic and logicb operations.
+# 14.program to enhance image using image arithmetic and logical operations.
+  Image arithmetic applies one of the standard arithmetic operations or a logical operator to two or more images. The operators are applied in a pixel-by-pixel way, i.e. the value of a pixel in the output image depends only on the values of the corresponding pixels in the input images. Hence, the images must be of the same size. Although image arithmetic is the most simple form of image processing, there is a wide range of applications. A main advantage of arithmetic operators is that the process is very simple and therefore fast. 
+Logical operators are often used to combine two (mostly binary) images. In the case of integer images, the logical operator is normally applied in a bitwise way.
   ## Addition
+```
 import cv2  
 import numpy as np  
 image1 = cv2.imread('app.jpg')  
@@ -448,11 +464,12 @@ weightedSum = cv2.addWeighted(image1, 0.5, image2, 0.4, 0)
 cv2.imshow('Weighted Image', weightedSum)
 if cv2.waitKey(0) & 0xff == 25:  
     cv2.destroyAllWindows() 
-
+```
 ![image](https://user-images.githubusercontent.com/77378707/107617825-9663dd80-6c76-11eb-9a5b-04ec000a1aa8.png)
 
   # Subtract
- import cv2  
+```  
+import cv2  
 import numpy as np  
 image1 = cv2.imread('chrome.jpg')  
 image2 = cv2.imread('app.jpg')
@@ -460,10 +477,11 @@ sub = cv2.subtract(image1, image2)
 cv2.imshow('Subtracted Image', sub)
 if cv2.waitKey(0) & 0xff == 27:  
     cv2.destroyAllWindows() 
-    
+ ```   
 ![image](https://user-images.githubusercontent.com/77378707/107618006-d9be4c00-6c76-11eb-97f0-e3d1caa84709.png)
 
 # logical operations
+```
 import cv2
 img1 = cv2.imread("app.jpg")
 img2 = cv2.imread("chrome.jpg")
@@ -479,7 +497,7 @@ bitwise_not = cv2.bitwise_not(img2)
 cv2.imshow("bitwise_not2", bitwise_not)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+``` 
 ![image](https://user-images.githubusercontent.com/77378707/107618190-2c980380-6c77-11eb-9c07-659d17106b98.png)
 ![image](https://user-images.githubusercontent.com/77378707/107618255-446f8780-6c77-11eb-8192-f127b976af34.png)
 ![image](https://user-images.githubusercontent.com/77378707/107618344-6ec14500-6c77-11eb-8e9f-62a78c4dd45c.png)
@@ -488,9 +506,19 @@ cv2.destroyAllWindows()
 
 
 # 15. program for gray level slicing with an without background.
+Grey level slicing is equivalent to band pass filtering. It manipulates group of intensity levels in an
+image up to specific range by diminishing rest or by leaving them alone. This transformation is applicable in
+medical images and satellite images such as X-ray flaws, CT scan. Two different approaches are adopted for
+grey level slicing [6][7].
+1) Grey level slicing without background: It displays high values in the specific region of an image and low
+value to other regions by ignoring background. grey levels by reducing all others to a constant level. 
+2) Grey level slicing with background: by preserving all other levels. 
+displays high values in specific region of an image and original grey level to other region by preserving
+background.
  ## code
   ### with background
- import cv2
+```
+import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 image=cv2.imread('app.jpg',0)
@@ -506,10 +534,11 @@ equ=np.hstack((image,z))
 plt.title('Original ||   Graylevel slicing with background')
 plt.imshow(equ,'gray')
 plt.show()
-
+```
 ![image](https://user-images.githubusercontent.com/77378707/107618990-71706a00-6c78-11eb-9c61-668eeb89746f.png)
 
 ### without background
+```
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
@@ -527,11 +556,17 @@ equ=np.hstack((image,z))
 plt.title('Original ||  Graylevel slicing w/o background')
 plt.imshow(equ,'gray')
 plt.show()
-
+```
 ![image](https://user-images.githubusercontent.com/77378707/107619139-b8f6f600-6c78-11eb-88f2-2dc5919043da.png)
 
 # 16. program for an image enhancement using histogram equalisation.
+Histogram Equalization
+Histogram Equalization is a computer image processing technique used to improve contrast in images. It accomplishes this by effectively spreading out the most frequent intensity values, i.e. stretching out the intensity range of the image. This method usually increases the global contrast of images when its usable data is represented by close contrast values. This allows for areas of lower local contrast to gain a higher contrast.
 
+A color histogram of an image represents the number of pixels in each type of color component. Histogram equalization cannot be applied separately to the Red, Green and Blue components of the image as it leads to dramatic changes in the image’s color balance. However, if the image is first converted to another color space, like HSL/HSV color space, then the algorithm can be applied to the luminance or value channel without resulting in changes to the hue and saturation of the image.
+
+
+```
 from matplotlib.pyplot import imread, imshow, show, subplot, title, get_cmap, hist
 from skimage.exposure import equalize_hist
 import numpy as np
@@ -546,15 +581,14 @@ subplot(223); imshow(eq, cmap=get_cmap('gray'));  title('Histogram Equalized')
 subplot(224); hist(eq.flatten(), 256, range=(0,256));
 
 show()
-
-
-
+```
 ![image](https://user-images.githubusercontent.com/77378707/107619652-813c7e00-6c79-11eb-80de-e107df63d6a1.png)
 
 
 # 17. To perform following operation in an image 
    ##  1.opening
    ##  2.closing
+```
 import cv2
 import numpy as np
 import pandas as pd
@@ -577,7 +611,7 @@ plt.show()
 plt.title('close image')
 plt.imshow(cv2.cvtColor(close, cv2.COLOR_BGR2RGB))
 plt.show()
-
+```
 ![image](https://user-images.githubusercontent.com/77378707/107619989-02941080-6c7a-11eb-9ca8-a8c703222f57.png)
 ![image](https://user-images.githubusercontent.com/77378707/107620014-0de73c00-6c7a-11eb-84d5-b22cc1fe4549.png)
 ![image](https://user-images.githubusercontent.com/77378707/107620032-16d80d80-6c7a-11eb-820a-9e55eb03a3c9.png)
