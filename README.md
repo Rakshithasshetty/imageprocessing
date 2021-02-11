@@ -528,4 +528,23 @@ plt.title('Original ||  Graylevel slicing w/o background')
 plt.imshow(equ,'gray')
 plt.show()
 
+![image](https://user-images.githubusercontent.com/77378707/107619139-b8f6f600-6c78-11eb-88f2-2dc5919043da.png)
+
+# 16. program for an image enhancement using histogram equalisation.
+
+from matplotlib.pyplot import imread, imshow, show, subplot, title, get_cmap, hist
+from skimage.exposure import equalize_hist
+import numpy as np
+
+
+img = imread('tom.jpg')
+eq = np.asarray(equalize_hist(img) * 255, dtype='uint8')
+
+subplot(221); imshow(img, cmap=get_cmap('gray')); title('Original')
+subplot(222); hist(img.flatten(), 256, range=(0,256)); title('Histogram of origianl')
+subplot(223); imshow(eq, cmap=get_cmap('gray'));  title('Histogram Equalized')
+subplot(224); hist(eq.flatten(), 256, range=(0,256));
+
+show()
+
 
