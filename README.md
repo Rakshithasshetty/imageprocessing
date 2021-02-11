@@ -548,3 +548,37 @@ subplot(224); hist(eq.flatten(), 256, range=(0,256));
 show()
 
 
+
+![image](https://user-images.githubusercontent.com/77378707/107619652-813c7e00-6c79-11eb-80de-e107df63d6a1.png)
+
+
+# 17. To perform following operation in an image 
+   ##  1.opening
+   ##  2.closing
+import cv2
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+img=cv2.imread('car.jpg')
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.show()
+img2=cv2.imread('car.jpg')
+
+kernel=np.ones((4,4),np.uint8)
+
+OPEN=cv2.morphologyEx(img2, cv2.MORPH_OPEN,kernel)
+plt.show()
+plt.title('OPEN image')
+plt.imshow(cv2.cvtColor(OPEN, cv2.COLOR_BGR2RGB))
+plt.show()
+
+close=cv2.morphologyEx(img2, cv2.MORPH_CLOSE,kernel)
+plt.show()
+plt.title('close image')
+plt.imshow(cv2.cvtColor(close, cv2.COLOR_BGR2RGB))
+plt.show()
+
+
+
+
+
